@@ -1,4 +1,7 @@
+import 'package:expenses/components/transaction_user.dart';
 import 'package:flutter/material.dart';
+
+import 'components/transaction_list.dart';
 
 main() => runApp(ExpensesApp());
 
@@ -26,7 +29,6 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Container(
@@ -36,10 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
               elevation: 5.0,
             ),
           ),
-          Card(
-            child: Text('Lista de Transações'),
-            elevation: 6.0,
-          )
+          TransactionUser()
         ],
       ),
     );
